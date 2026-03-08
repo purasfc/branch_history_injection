@@ -1,0 +1,1 @@
+savedcmd_test_offset.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.14.0-37-generic/scripts/module.lds -o test_offset.ko test_offset.o test_offset.mod.o .module-common.o

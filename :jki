@@ -1,0 +1,6 @@
+#ifndef COMMON_H
+#define COMMON_H
+
+#define STRIDE (4096)
+uint64_t virt_to_physmap(uint64_t);
+#endif
