@@ -1,0 +1,18 @@
+# object files
+*.o
+
+# executables
+a.out
+main
+*.out
+
+# build directories
+build/
+bin/
+
+# make
+*.d
+
+# editor
+*.swp
+.DS_Store
