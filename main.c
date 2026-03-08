@@ -17,6 +17,8 @@ int main(void) {
 	}
 	memset(fr_buf, 0x41, STRIDE);
 	fr_buf_kern = (uint8_t *)(virt_to_physmap((uint64_t) fr_buf));	
+	printf("%20s: 0x%016lx\n", "fr_buf user", (uint64_t) fr_buf);
+	printf("%20s: 0x%016lx\n", "fr_buf kern", (uint64_t)fr_buf_kern);
 	munmap(fr_buf, STRIDE);
 	return 0;
 }

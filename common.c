@@ -18,13 +18,11 @@ uint64_t virt_to_physmap(uint64_t virtual_address) {
 	}
 
 	got = pread(pagemap, &value, 8, (virtual_address / 0x1000) * 8);
-	printf("got: %i\n", got);	
 	if (got != 8) {
 		exit(2);
 	}
 
 	page_frame_number = value & ((1ULL << 54) - 1);
-	printf("pfn: %lu\n", page_frame_number);	
 	if (page_frame_number == 0) {
 		exit(3);
 	}

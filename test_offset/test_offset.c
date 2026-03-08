@@ -5,7 +5,7 @@
 
 static int __init test_init(void) {
     printk(KERN_INFO "PAGE_OFFSET: 0x%lx\n", PAGE_OFFSET);
-    printk(KERN_INFO "PHYS_OFFSET: 0x%lx\n", memstart_addr);
+    printk(KERN_INFO "PHYS_OFFSET: 0x%lx\n", PHYS_OFFSET);
     return 0;
 }
 static void __exit test_exit(void) {}

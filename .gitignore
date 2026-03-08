@@ -1,6 +1,6 @@
 # object files
-*.o
-
+**/*.o
+**/*.ko
 # executables
 a.out
 main

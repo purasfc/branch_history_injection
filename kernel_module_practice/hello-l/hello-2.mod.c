@@ -19,24 +19,21 @@ __section(".gnu.linkonce.this_module") = {
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
 	{ 0xe8213e80, "_printk" },
-	{ 0xd41df557, "memstart_addr" },
 	{ 0xbf80d1e1, "module_layout" },
 };
 
 static const u32 ____version_ext_crcs[]
 __used __section("__version_ext_crcs") = {
 	0xe8213e80,
-	0xd41df557,
 	0xbf80d1e1,
 };
 static const char ____version_ext_names[]
 __used __section("__version_ext_names") =
 	"_printk\0"
-	"memstart_addr\0"
 	"module_layout\0"
 ;
 
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "E398FD64A137A67D3DD45FF");
+MODULE_INFO(srcversion, "BA1FA96883243D6224870E5");
