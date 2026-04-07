@@ -13,11 +13,12 @@
 #define ITER 100
 uint8_t evict_buffer[EVICT_SIZE];
 
-void evict_target(void) {
-	uint8_t sum = 0;
+uint8_t evict_target(void) {
+	volatile uint8_t sum = 0;
 	for (int i=0; i<EVICT_SIZE; i++) {
 		sum += evict_buffer[i];
 	}
+	return sum;
 }
 
 int main (int argc, char **argv) {
@@ -42,7 +43,7 @@ int main (int argc, char **argv) {
 
 	avg = 0; min = 999999; max = 0;
 	for (int i=0; i<ITER; i++) {
-		clflush(fr_buf);
+		evict_target();
 		fence();
 
 		t = load_time(fr_buf);
