@@ -1,0 +1,1 @@
+savedcmd_/home/pura/src/branch_history_injection/pmu_enable/pmu_enable.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/pura/src/branch_history_injection/pmu_enable/pmu_enable.ko /home/pura/src/branch_history_injection/pmu_enable/pmu_enable.o /home/pura/src/branch_history_injection/pmu_enable/pmu_enable.mod.o
