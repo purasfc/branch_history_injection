@@ -31,7 +31,7 @@ static inline __attribute__((always_inline)) void clflush(void *p) {
 static inline __attribute__((always_inline)) uint64_t rdtscp(void) {
 	uint64_t result;
 	fence();
-	asm volatile("mrs %0, pmccntr_el0" : "=r" (result));
+	asm volatile("mrs %0, cntvct_el0" : "=r" (result));
 	fence();
 	return result;
 }

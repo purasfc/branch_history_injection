@@ -5,6 +5,8 @@
 #define PHYS_OFFSET 0x40000000LL
 #define PAGE_OFFSET 0xffff800080000000ULL
 #define EVICT_SIZE 102*1024*1024
+#define THR 4
+#define HISTORY_SIZE 256
 
 #endif // _TARGETS_H_
 
