@@ -46,7 +46,7 @@ int main (int argc, char **argv) {
 	size_t results[2];
 	memset((void*)evict_buffer, 0x42, EVICT_SIZE);
 	uint8_t *fr_buf = mmap(NULL, 2*STRIDE, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_POPULATE, -1, 0);
-	printf("fr_buf = %p\n", fr_buf);
+	// printf("fr_buf = %p\n", fr_buf);
 	memset(fr_buf, 0x41, 2*STRIDE);
 
 	avg = 0; min = 999999; max = 0;
@@ -67,14 +67,14 @@ int main (int argc, char **argv) {
 		fence();
 
 		t = load_time(fr_buf);
-		printf("%lu\n", t);
+		// printf("%lu\n", t);
 		avg += t;
 		if (t > max) max = t;
 		if (t < min) min = t;
 	}
 	printf("Slow access: avg: %f min: %ld max: %ld\n", (float)avg/ITER, min, max);
 
-	char *secret = "immature-asshole";
+	char *secret = "aquaisgood";
 	uint8_t byte;
 
 	for (int i=0; i<strlen(secret); i++) {
